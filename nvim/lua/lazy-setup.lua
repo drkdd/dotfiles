@@ -21,18 +21,21 @@ vim.opt.rtp:prepend(lazypath)
 -- Pass it the options we specified above
 
 require("lazy").setup({
-    {
-        { import = "plugins" },
-        { import = "plugins.lsp" }
-    },
+
+	spec = {
+		{ import = "plugins" },
+		{ import = "plugins.lsp" },
+	},
+
 	change_detection = {
 		-- Don't notify us every time a change is made to the configuration
 		notify = false,
 	},
+
 	checker = {
 		-- Automatically check for package updates
 		enabled = true,
 		-- Don't spam us with notification every time there is an update available
-	 	notify = false,
+		notify = false,
 	},
 })
