@@ -1,8 +1,3 @@
--- Set our leader keybinding to space
--- Anywhere you see <leader> in a keymapping specifies the space key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Remove search highlights after searching
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Remove search highlights" })
 
@@ -20,6 +15,10 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+-- Move across tabs (bufferline.nvim)
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Sonraki sekme" })
+vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Önceki sekme" })
 
 -- Easily split windows
 vim.keymap.set("n", "<leader>wv", ":vsplit<cr>", { desc = "[W]indow Split [V]ertical" })

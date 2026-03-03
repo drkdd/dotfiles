@@ -1,3 +1,4 @@
+-- this mapleaders must be declared before lazy
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
