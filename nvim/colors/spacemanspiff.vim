@@ -70,7 +70,16 @@ highlight StatusLineTerm guifg=#212121 guibg=#9ed88a gui=NONE ctermfg=16 ctermbg
 highlight StatusLineTermNC guifg=#212121 guibg=#535456 gui=NONE ctermfg=16 ctermbg=240 cterm=NONE
 highlight String guifg=#9ed88a guibg=NONE ctermfg=2 ctermbg=NONE
 highlight Structure guifg=#ae96ff guibg=NONE ctermfg=5 ctermbg=NONE
-highlight TabLine guifg=#c5c8c6 guibg=#212121 gui=reverse ctermfg=7 ctermbg=16 cterm=reverse
+
+" 1. Aktif olmayan sekmeler ve 'File Explorer' arka planı
+highlight TabLine guifg=#969896 guibg=#282a2e gui=NONE ctermfg=245 ctermbg=236 cterm=NONE
+
+" 2. Aktif (şu an çalıştığın) sekmenin arka planı ve yazısı
+highlight TabLineSel guifg=#a0cbff guibg=#212121 gui=bold ctermfg=4 ctermbg=16 cterm=bold
+
+" 3. Sekmelerin sağında kalan boş, kullanılmayan arka plan
+highlight TabLineFill guifg=NONE guibg=#212121 gui=NONE ctermfg=NONE ctermbg=16 cterm=NONE
+
 highlight Title guifg=#969896 guibg=NONE ctermfg=245 ctermbg=NONE
 highlight Todo guifg=#969896 guibg=#212121 ctermfg=245 ctermbg=16
 highlight Type guifg=#fce9a9 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
