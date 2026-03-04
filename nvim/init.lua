@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.cmd("colorscheme spacemanspiff")
+-- vim.cmd("colorscheme spacemanspiff")
 
 -- Load the options from the config/options.lua file
 require("config.options")
