@@ -41,14 +41,14 @@ return {
                 -- set keymappings to navigate through items in the telescope io
                 mappings = {
                     i = {
-                         -- use <ctrl> + j to go to the next option
-                        ["<C-j>"] = actions.cycle_history_next,
-                        -- use <ctrl> + k to go to the previous option
-                        ["<C-k>"] = actions.cycle_history_prev,
                         -- use <ctrl> + n to go to the next preview
                         ["<C-n>"] = actions.move_selection_next,
                         -- use <ctrl> + p to go to the previous preview
                         ["<C-p>"] = actions.move_selection_previous,
+                         -- use <ctrl> + j to go to the next option
+                        ["<C-j>"] = actions.preview_scrolling_down,
+                        -- use <ctrl> + k to go to the previous option
+                        ["<C-k>"] = actions.preview_scrolling_up,
                     }
                 },
                 -- load the ui-select extension
