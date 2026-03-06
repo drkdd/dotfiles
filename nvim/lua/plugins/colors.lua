@@ -1,19 +1,21 @@
 return {
-    "projekt0n/github-nvim-theme",
-        lazy = false,
-        priority = 1000,
+    {
+        "projekt0n/github-nvim-theme",
+            lazy = false,
+            priority = 1000,
+            config = function()
+                require("github-theme").setup({
+                    options = {
+                        transparent = true, 
+                    }
+                })
+                vim.cmd("colorscheme github_dark")
+            end,    
+    },
+    {
+        "xiyaowong/transparent.nvim",
         config = function()
-            require("github-theme").setup({
-                options = {
-                    transparent = true, 
-                }
-            })
-            vim.cmd("colorscheme github_dark")
-        end,    
+            require('transparent').clear_prefix('BufferLine')
+        end
+    }
 }
--- return {
---     "xiyaowong/transparent.nvim",
---     config = function()
---        vim.cmd("colorscheme default")
---     end
--- }

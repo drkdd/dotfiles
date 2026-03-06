@@ -32,4 +32,6 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right in visual mode" })
 vim.keymap.set('n', '<C-_>', 'gcc', { remap = true, desc = 'Toggle comment line current line' })
 vim.keymap.set('v', '<C-_>', 'gc', { remap = true, desc = 'Toggle comment line the selection' })
 
-
+-- Personal shortcuts
+vim.keymap.set('n', '<CR>', 'o<Esc>')
+vim.keymap.set('n', '<S-CR>', 'O<Esc>')

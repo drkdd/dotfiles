@@ -59,23 +59,29 @@ return {
 
         -- 2. ADIM: Yeni Eşleme (Mapping) Formatı
         which_key.add({
+
             { "<leader>a", "<cmd>Alpha<cr>", desc = "Alpha", nowait = true, remap = false },
+
             -- this did not worked.
             -- { "<leader>b", group = "Bufferline", nowait = true, remap = false },  
             -- { "<leader>bb", "<cmd>bd<CR>", desc = "Close Buffer", nowait = true, remap = false },
             -- { "<leader>bw", "<cmd>q<CR>", desc = "Close Buffer Window", nowait = true, remap = false },
+
             { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer", nowait = true, remap = false },
+
             { "<leader>f", group = "File Search", nowait = true, remap = false },
             { "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Colorscheme", nowait = true, remap = false },
             { "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", desc = "Find files", nowait = true, remap = false },
             { "<leader>fg", "<cmd>Telescope live_grep <cr>", desc = "Find Text Pattern", nowait = true, remap = false },
             { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent Files", nowait = true, remap = false },
             { "<leader>k", "<cmd>bdelete<CR>", desc = "Kill Buffer", nowait = true, remap = false },
+
             { "<leader>l", group = "LSP", nowait = true, remap = false },
             { "<leader>lS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Workspace Symbols", nowait = true, remap = false },
             { "<leader>li", "<cmd>LspInfo<cr>", desc = "Info", nowait = true, remap = false },
             { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename", nowait = true, remap = false },
             { "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document Symbols", nowait = true, remap = false },
+
             { "<leader>m", "<cmd>Mason<cr>", desc = "Mason", nowait = true, remap = false },
             { "<leader>p", "<cmd>Lazy<CR>", desc = "Plugin Manager", nowait = true, remap = false },
             { "<leader>q", "<cmd>wqall!<CR>", desc = "Quit", nowait = true, remap = false },
@@ -86,6 +92,7 @@ return {
             { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps", nowait = true, remap = false },
             { "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "Man Pages", nowait = true, remap = false },
             { "<leader>sr", "<cmd>Telescope registers<cr>", desc = "Registers", nowait = true, remap = false },
+
             { "<leader>t", group = "Terminal", nowait = true, remap = false },
             { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Float", nowait = true, remap = false },
             { "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Horizontal", nowait = true, remap = false },
