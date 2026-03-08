@@ -3,13 +3,14 @@ return {
     version = "*",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-        -- Fareyle üzerine gelme (hover) olaylarını Neovim'in algılayabilmesi için zorunlu ayar:
+        local bufferline = require('bufferline')
         vim.opt.mousemoveevent = true
 
-        require("bufferline").setup({
+        bufferline.setup({
+          
             options = {
                 mode = "buffers",
-                separator_style = "slant", 
+                separator_style = "slant", --white triangles exist because of transparency in colorscheme (for slant)
                 
                 -- 1. NvimTree'nin üstünü boş bırak ve "File Explorer" yaz
                 offsets = {
@@ -22,13 +23,13 @@ return {
                 },
 
                 -- 2. Çarpı işaretlerini normalde gizle
-                show_buffer_close_icons = false,
-                show_close_icon = false,
-                
+                show_buffer_close_icons = true,
+                show_close_icon = true,
+
                 -- 3. Sadece fareyle sekmenin üzerine gelince (hover) çarpıyı göster
                 hover = {
-                    enabled = true,
-                    delay = 200,
+                    enabled = true, 
+                    delay = 10,
                     reveal = {'close'}
                 },
 
@@ -39,7 +40,9 @@ return {
                 modified_icon = '●', 
                 color_icons = true, 
                 always_show_bufferline = true,
-            }
+            },
+
+            
         })
     end
 }

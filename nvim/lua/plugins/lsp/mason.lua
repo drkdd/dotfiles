@@ -7,9 +7,12 @@ return {
         "lua_ls",
         "clangd",
         "bashls",
-        "tsserver",
+        -- "tsserver",
         "jdtls"
       },
+      automatic_enable = {
+           -- exclude = { "jdtls" }
+      }
     },
     dependencies = {
       {
@@ -24,7 +27,7 @@ return {
           },
         },
       },
-      "neovim/nvim-lspconfig",
+        { "neovim/nvim-lspconfig" },
     },
   },
   {
