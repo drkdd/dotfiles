@@ -11,7 +11,7 @@ return {
         "jdtls"
       },
       automatic_enable = {
-           -- exclude = { "jdtls" }
+           exclude = { "jdtls" }
       }
     },
     dependencies = {
